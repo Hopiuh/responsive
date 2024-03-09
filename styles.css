@@ -1,0 +1,124 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #ff0000; /* Red text color */
+    background-image: url('../images/supercar.gif'); /* Replace 'your-ferrari.gif' with the path to your Ferrari GIF */
+    background-size: cover;
+    background-position: center;
+    animation: animateBackground 60s linear infinite; /* Adjust the animation duration as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+}
+
+@keyframes animateBackground {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 0;
+    }
+}
+
+.container {
+    max-width: 900px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5); /* Soft shadow effect */
+}
+
+h1 {
+    color: #e81111cc; /* Red heading color */
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Image Gallery Styles */
+#imageGallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.col-md-4 {
+    transition: transform 0.3s ease;
+}
+
+.col-md-4:hover {
+    transform: scale(1.05);
+}
+
+.img-fluid {
+    border-radius: 8px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 15px;
+    transition: transform 0.3s ease;
+}
+
+.img-fluid:hover {
+    transform: scale(1.05);
+    filter: brightness(120%);
+    box-shadow: 0px 5px 15px rgba(255, 0, 0, 0.776); /* Glowing red shadow on hover */
+}
+
+.img-container {
+    position: relative;
+}
+
+.img-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 5px;
+    font-size: 14px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.img-container:hover .img-caption {
+    opacity: 1;
+}
+/* Form Styles */
+#imageUrlInput {
+    border-radius: 25px;
+    border: 1px solid #ced4da;
+    padding: 10px;
+    transition: border-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    margin-bottom: 20px;
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+#imageUrlInput:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+#addImageButton {
+    border-radius: 25px;
+    background-color: #59084d; /* Yellow button color */
+    border: none;
+    color: #000; /* Black text color */
+    transition: background-color 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+#addImageButton:hover {
+    background-color: #7c0fa7; /* Lighter yellow on hover */
+}
